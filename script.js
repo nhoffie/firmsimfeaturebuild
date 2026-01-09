@@ -12,7 +12,3 @@ const asset = {
 };
 
 const holdings = {};
-
-function addAsset(holdings, asset, quantity) {
-    holdings[compressAsset(asset)] = { asset: asset, quantity: quantity };
-}

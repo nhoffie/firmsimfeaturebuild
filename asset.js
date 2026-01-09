@@ -46,3 +46,7 @@ function compressAsset(asset) {
 function uncompressAsset(id) {
     return JSON.parse(id);
 }
+
+function addAsset(holdings, asset, quantity) {
+    holdings[compressAsset(asset)] = { asset: asset, quantity: quantity };
+}
