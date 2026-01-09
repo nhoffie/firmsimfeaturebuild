@@ -1,8 +1,8 @@
-function createFirm() {
+function createFirm(name = "", assets = 0, liabilities = 0) {
     return {
-        name: "",
-        assets: 0,
-        liabilities: 0
+        name: name,
+        assets: assets,
+        liabilities: liabilities
     };
 }
 
