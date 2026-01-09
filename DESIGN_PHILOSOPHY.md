@@ -110,6 +110,28 @@ The following are acceptable without explicit request:
 - Script/style tags needed for functionality to work
 - Minimal DOM event handlers required for interactivity
 - Console logs for debugging critical errors (not for general logging)
+- Function comments (see below)
+
+## Function Comments
+
+All functions must include a brief comment block explaining:
+1. Purpose of the function (one line)
+2. Arguments (parameter name and type)
+3. Return value (type and description)
+4. Usage example
+
+Format:
+```javascript
+// Brief description of what the function does
+// Arguments: param1 (type), param2 (type)
+// Returns: returnValue (type)
+// Usage: functionName(example1, example2)
+function functionName(param1, param2) {
+    // implementation
+}
+```
+
+Keep comments concise and factual. No verbose explanations or implementation details.
 
 ## Technology Approach
 
