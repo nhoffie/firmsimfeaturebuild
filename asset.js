@@ -1,9 +1,9 @@
-function createAsset() {
+function createAsset(name, maxPrecision, isFungible, type) {
     return {
-        name: "",
-        maxPrecision: 0,
-        isFungible: false,
-        type: ""
+        name: name,
+        maxPrecision: maxPrecision,
+        isFungible: isFungible,
+        type: type
     };
 }
 
