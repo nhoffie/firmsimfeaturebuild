@@ -12,3 +12,8 @@ const asset = {
 };
 
 const holdings = {};
+
+const session = {
+    assets: {},
+    firms: {}
+};

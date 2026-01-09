@@ -1,13 +1,14 @@
-// Creates a new firm object
+// Creates a new firm object and adds it to session
 // Arguments: name (string), assets (string - JSON stringify compressed holdings), liabilities (number) - all optional
-// Returns: firm object with name, assets, and liabilities properties
+// Returns: nothing
 // Usage: createFirm("Acme Corp", "{}", 5000) or createFirm()
 function createFirm(name = "", assets = "{}", liabilities = 0) {
-    return {
+    const firm = {
         name: name,
         assets: assets,
         liabilities: liabilities
     };
+    session.firms[JSON.stringify(firm)] = firm;
 }
 
 // Gets the name of a firm
