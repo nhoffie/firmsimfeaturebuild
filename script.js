@@ -10,3 +10,5 @@ const asset = {
     isFungible: false,
     type: ""
 };
+
+const assetsObject = {};
