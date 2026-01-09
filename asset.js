@@ -1,0 +1,40 @@
+function createAsset() {
+    return {
+        name: "",
+        maxPrecision: 0,
+        isFungible: false,
+        type: ""
+    };
+}
+
+function getName(asset) {
+    return asset.name;
+}
+
+function setName(asset, name) {
+    asset.name = name;
+}
+
+function getMaxPrecision(asset) {
+    return asset.maxPrecision;
+}
+
+function setMaxPrecision(asset, maxPrecision) {
+    asset.maxPrecision = maxPrecision;
+}
+
+function getIsFungible(asset) {
+    return asset.isFungible;
+}
+
+function setIsFungible(asset, isFungible) {
+    asset.isFungible = isFungible;
+}
+
+function getType(asset) {
+    return asset.type;
+}
+
+function setType(asset, type) {
+    asset.type = type;
+}
