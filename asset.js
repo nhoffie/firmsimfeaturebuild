@@ -38,3 +38,11 @@ function getType(asset) {
 function setType(asset, type) {
     asset.type = type;
 }
+
+function compressAsset(asset) {
+    return JSON.stringify(asset);
+}
+
+function uncompressAsset(id) {
+    return JSON.parse(id);
+}
