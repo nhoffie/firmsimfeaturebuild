@@ -1,1 +1,1 @@
-const powerPlant = createFirm("Power Plant");
+createFirm("Power Plant");
