@@ -6,7 +6,7 @@ const firm = {
 
 const asset = {
     name: "",
-    divisibility: 0,
-    fungibility: false,
+    maxPrecision: 0,
+    isFungible: false,
     type: ""
 };
