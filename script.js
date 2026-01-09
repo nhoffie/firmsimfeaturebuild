@@ -1,6 +1,6 @@
 const firm = {
     name: "",
-    assets: 0,
+    assets: "{}",
     liabilities: 0
 };
 

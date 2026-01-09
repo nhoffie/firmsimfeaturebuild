@@ -1,8 +1,8 @@
 // Creates a new firm object
-// Arguments: name (string), assets (number), liabilities (number) - all optional
+// Arguments: name (string), assets (string - JSON stringify compressed holdings), liabilities (number) - all optional
 // Returns: firm object with name, assets, and liabilities properties
-// Usage: createFirm("Acme Corp", 10000, 5000) or createFirm()
-function createFirm(name = "", assets = 0, liabilities = 0) {
+// Usage: createFirm("Acme Corp", "{}", 5000) or createFirm()
+function createFirm(name = "", assets = "{}", liabilities = 0) {
     return {
         name: name,
         assets: assets,
@@ -28,16 +28,16 @@ function setName(firm, name) {
 
 // Gets the assets value of a firm
 // Arguments: firm (firm object)
-// Returns: assets (number)
+// Returns: assets (string - JSON stringify compressed holdings)
 // Usage: getAssets(myFirm)
 function getAssets(firm) {
     return firm.assets;
 }
 
 // Sets the assets value of a firm
-// Arguments: firm (firm object), assets (number)
+// Arguments: firm (firm object), assets (string - JSON stringify compressed holdings)
 // Returns: nothing
-// Usage: setAssets(myFirm, 15000)
+// Usage: setAssets(myFirm, "{}")
 function setAssets(firm, assets) {
     firm.assets = assets;
 }
