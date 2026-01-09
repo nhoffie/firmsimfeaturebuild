@@ -11,8 +11,8 @@ const asset = {
     type: ""
 };
 
-const assetsObject = {};
+const holdings = {};
 
-function addAsset(assetsObject, asset, quantity) {
-    assetsObject[asset.name] = { asset: asset, quantity: quantity };
+function addAsset(holdings, asset, quantity) {
+    holdings[compressAsset(asset)] = { asset: asset, quantity: quantity };
 }
