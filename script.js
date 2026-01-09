@@ -12,3 +12,7 @@ const asset = {
 };
 
 const assetsObject = {};
+
+function addAsset(assetsObject, asset, quantity) {
+    assetsObject[asset.name] = { asset: asset, quantity: quantity };
+}
