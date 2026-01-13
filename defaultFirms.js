@@ -1,1 +1,0 @@
-createFirm("Power Plant");

@@ -1,17 +1,3 @@
-// Creates a new asset object and adds it to session
-// Arguments: name (string), maxPrecision (number), isFungible (boolean), type (string) - all optional
-// Returns: nothing
-// Usage: createAsset("Gold", 0.01, true, "commodity") or createAsset()
-function createAsset(name = "", maxPrecision = 0, isFungible = false, type = "") {
-    const asset = {
-        name: name,
-        maxPrecision: maxPrecision,
-        isFungible: isFungible,
-        type: type
-    };
-    session.assets[JSON.stringify(asset)] = asset;
-}
-
 // Gets the name of an asset
 // Arguments: asset (asset object)
 // Returns: name (string)
