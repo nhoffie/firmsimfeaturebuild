@@ -69,3 +69,11 @@ function setType(assetType, type) {
 function createAssetInstance(assetType, quantity) {
     return { asset: assetType, quantity: quantity };
 }
+
+// Gets an assetType from session by name
+// Arguments: name (string)
+// Returns: assetType (assetType object)
+// Usage: getAssetTypeByName("energy")
+function getAssetTypeByName(name) {
+    return session.assetTypes[name];
+}
