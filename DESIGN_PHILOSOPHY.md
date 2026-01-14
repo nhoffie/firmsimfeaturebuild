@@ -160,12 +160,13 @@ Keep comments concise and factual. No verbose explanations or implementation det
 - Use BigNumber methods: `.plus()`, `.minus()`, `.times()`, `.dividedBy()`, `.modulo()`
 - This ensures precision and consistency across all numerical operations
 
-### Function Parameters for Numeric Values
-- Functions should natively accept BigNumber instances as parameters
-- Functions should also accept standard JavaScript numbers that are immediately converted to BigNumber
+### Asset Quantity Parameters
+- Functions dealing with asset quantities should natively accept BigNumber instances as parameters
+- These functions should also accept standard JavaScript numbers that are immediately converted to BigNumber
 - When converting to BigNumber, immediately set decimal places to match the relevant assetType's maxDecimals
 - Conversion pattern: `const bigQuantity = (quantity instanceof BigNumber ? quantity : new BigNumber(quantity)).decimalPlaces(assetType.maxDecimals);`
-- This ensures proper precision is applied at conversion time, maintaining consistency throughout calculations
+- This conversion pattern applies ONLY to parameters representing quantities in an asset instance
+- Other numeric values (like maxDecimals, liabilities, etc.) do not require this conversion pattern
 
 ## Communication
 
