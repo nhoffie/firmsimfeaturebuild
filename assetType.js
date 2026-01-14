@@ -77,3 +77,11 @@ function compressAssetType(assetType) {
 function uncompressAssetType(id) {
     return JSON.parse(id);
 }
+
+// Creates an asset instance with an asset type and quantity
+// Arguments: assetTypeJson (string), quantity (BigNumber)
+// Returns: assetInstance (object)
+// Usage: createAssetInstance('{"name":"energy","maxDecimals":3,"isFungible":true,"type":"commodity"}', new BigNumber(100))
+function createAssetInstance(assetTypeJson, quantity) {
+    return { asset: JSON.parse(assetTypeJson), quantity: quantity };
+}
