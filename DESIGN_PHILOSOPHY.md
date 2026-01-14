@@ -163,8 +163,9 @@ Keep comments concise and factual. No verbose explanations or implementation det
 ### Function Parameters for Numeric Values
 - Functions should natively accept BigNumber instances as parameters
 - Functions should also accept standard JavaScript numbers that are immediately converted to BigNumber
-- Conversion pattern: `const bigQuantity = quantity instanceof BigNumber ? quantity : new BigNumber(quantity);`
-- This allows flexibility while maintaining BigNumber precision throughout calculations
+- When converting to BigNumber, immediately set decimal places to match the relevant assetType's maxDecimals
+- Conversion pattern: `const bigQuantity = (quantity instanceof BigNumber ? quantity : new BigNumber(quantity)).decimalPlaces(assetType.maxDecimals);`
+- This ensures proper precision is applied at conversion time, maintaining consistency throughout calculations
 
 ## Communication
 

@@ -51,8 +51,7 @@ function setLiabilities(firm, liabilities) {
 // Returns: nothing
 // Usage: changeAssetQuantity(myFirm, energyAssetType, new BigNumber(100))
 function changeAssetQuantity(firm, assetType, quantity) {
-    const bigQuantity = quantity instanceof BigNumber ? quantity : new BigNumber(quantity);
-    const adjustedQuantity = bigQuantity.decimalPlaces(assetType.maxDecimals);
+    const adjustedQuantity = (quantity instanceof BigNumber ? quantity : new BigNumber(quantity)).decimalPlaces(assetType.maxDecimals);
     if (firm.assets[assetType.name]) {
         const newQuantity = firm.assets[assetType.name].quantity.plus(adjustedQuantity).decimalPlaces(assetType.maxDecimals);
         if (newQuantity.isEqualTo(0)) {
