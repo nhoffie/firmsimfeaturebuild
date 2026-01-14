@@ -45,3 +45,20 @@ function getLiabilities(firm) {
 function setLiabilities(firm, liabilities) {
     firm.liabilities = liabilities;
 }
+
+// Adds an asset instance to a firm's assets
+// Arguments: firm (firm object), assetType (assetType object), quantity (BigNumber)
+// Returns: nothing
+// Usage: addAssetInstance(myFirm, energyAssetType, new BigNumber(100))
+function addAssetInstance(firm, assetType, quantity) {
+    if (firm.assets[assetType.name]) {
+        const newQuantity = firm.assets[assetType.name].quantity.plus(quantity);
+        if (newQuantity.isEqualTo(0)) {
+            delete firm.assets[assetType.name];
+        } else {
+            firm.assets[assetType.name].quantity = newQuantity;
+        }
+    } else {
+        firm.assets[assetType.name] = createAssetInstance(assetType, quantity);
+    }
+}
