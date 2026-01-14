@@ -67,7 +67,7 @@ function setType(assetType, type) {
 // Returns: assetInstance (object)
 // Usage: createAssetInstance({name:"energy",maxDecimals:3,isFungible:true,type:"commodity"}, new BigNumber(100))
 function createAssetInstance(assetType, quantity) {
-    return { asset: assetType, quantity: quantity };
+    return { asset: assetType, quantity: quantity.decimalPlaces(assetType.maxDecimals) };
 }
 
 // Gets an assetType from session by name
