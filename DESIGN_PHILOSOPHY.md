@@ -160,6 +160,12 @@ Keep comments concise and factual. No verbose explanations or implementation det
 - Use BigNumber methods: `.plus()`, `.minus()`, `.times()`, `.dividedBy()`, `.modulo()`
 - This ensures precision and consistency across all numerical operations
 
+### Function Parameters for Numeric Values
+- Functions should natively accept BigNumber instances as parameters
+- Functions should also accept standard JavaScript numbers that are immediately converted to BigNumber
+- Conversion pattern: `const bigQuantity = quantity instanceof BigNumber ? quantity : new BigNumber(quantity);`
+- This allows flexibility while maintaining BigNumber precision throughout calculations
+
 ## Communication
 
 When receiving a feature request:

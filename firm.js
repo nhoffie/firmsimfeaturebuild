@@ -47,11 +47,12 @@ function setLiabilities(firm, liabilities) {
 }
 
 // Changes the quantity of an asset type in a firm's assets
-// Arguments: firm (firm object), assetType (assetType object), quantity (BigNumber)
+// Arguments: firm (firm object), assetType (assetType object), quantity (BigNumber or number)
 // Returns: nothing
 // Usage: changeAssetQuantity(myFirm, energyAssetType, new BigNumber(100))
 function changeAssetQuantity(firm, assetType, quantity) {
-    const adjustedQuantity = quantity.decimalPlaces(assetType.maxDecimals);
+    const bigQuantity = quantity instanceof BigNumber ? quantity : new BigNumber(quantity);
+    const adjustedQuantity = bigQuantity.decimalPlaces(assetType.maxDecimals);
     if (firm.assets[assetType.name]) {
         const newQuantity = firm.assets[assetType.name].quantity.plus(adjustedQuantity).decimalPlaces(assetType.maxDecimals);
         if (newQuantity.isEqualTo(0)) {
