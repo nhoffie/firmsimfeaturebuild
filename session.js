@@ -1,5 +1,5 @@
 const session = {
-    assets: {},
+    assetTypes: {},
     firms: {}
 };
 
@@ -14,7 +14,7 @@ function createAssetType(name = "", maxDecimals = 0, isFungible = false, type = 
         isFungible: isFungible,
         type: type
     };
-    session.assets[name] = assetType;
+    session.assetTypes[name] = assetType;
 }
 
 // Creates a new firm object and adds it to session
