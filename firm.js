@@ -16,16 +16,16 @@ function setName(firm, name) {
 
 // Gets the assets value of a firm
 // Arguments: firm (firm object)
-// Returns: assets (string - JSON stringify compressed holdings)
+// Returns: assets (object)
 // Usage: getAssets(myFirm)
 function getAssets(firm) {
     return firm.assets;
 }
 
 // Sets the assets value of a firm
-// Arguments: firm (firm object), assets (string - JSON stringify compressed holdings)
+// Arguments: firm (firm object), assets (object)
 // Returns: nothing
-// Usage: setAssets(myFirm, "{}")
+// Usage: setAssets(myFirm, {})
 function setAssets(firm, assets) {
     firm.assets = assets;
 }

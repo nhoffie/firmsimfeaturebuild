@@ -62,26 +62,10 @@ function setType(assetType, type) {
     assetType.type = type;
 }
 
-// Compresses an assetType object into a unique ID string
-// Arguments: assetType (assetType object)
-// Returns: id (string)
-// Usage: compressAssetType(myAssetType)
-function compressAssetType(assetType) {
-    return JSON.stringify(assetType);
-}
-
-// Uncompresses an ID string back into an assetType object
-// Arguments: id (string)
-// Returns: assetType (assetType object)
-// Usage: uncompressAssetType(assetTypeId)
-function uncompressAssetType(id) {
-    return JSON.parse(id);
-}
-
 // Creates an asset instance with an asset type and quantity
-// Arguments: assetTypeJson (string), quantity (BigNumber)
-// Returns: assetInstance (string)
-// Usage: createAssetInstance('{"name":"energy","maxDecimals":3,"isFungible":true,"type":"commodity"}', new BigNumber(100))
-function createAssetInstance(assetTypeJson, quantity) {
-    return JSON.stringify({ asset: assetTypeJson, quantity: quantity });
+// Arguments: assetType (assetType object), quantity (BigNumber)
+// Returns: assetInstance (object)
+// Usage: createAssetInstance({name:"energy",maxDecimals:3,isFungible:true,type:"commodity"}, new BigNumber(100))
+function createAssetInstance(assetType, quantity) {
+    return { asset: assetType, quantity: quantity };
 }
