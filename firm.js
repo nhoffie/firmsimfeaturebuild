@@ -47,17 +47,17 @@ function setLiabilities(firm, liabilities) {
 }
 
 // Adds an asset to a firm's holdings with specified quantity
-// Arguments: firm (firm object), asset (asset object), quantity (number)
+// Arguments: firm (firm object), assetType (assetType object), quantity (number)
 // Returns: nothing
-// Usage: addAssetToFirm(myFirm, energyAsset, 100)
-function addAssetToFirm(firm, asset, quantity) {
+// Usage: addAssetToFirm(myFirm, energyAssetType, 100)
+function addAssetToFirm(firm, assetType, quantity) {
     const holdings = JSON.parse(firm.assets);
-    const assetKey = compressAsset(asset);
+    const assetKey = compressAssetType(assetType);
 
     if (holdings[assetKey]) {
         holdings[assetKey].quantity += quantity;
     } else {
-        holdings[assetKey] = { asset: asset, quantity: quantity };
+        holdings[assetKey] = { asset: assetType, quantity: quantity };
     }
 
     firm.assets = JSON.stringify(holdings);

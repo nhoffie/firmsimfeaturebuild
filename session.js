@@ -3,18 +3,18 @@ const session = {
     firms: {}
 };
 
-// Creates a new asset object and adds it to session
+// Creates a new assetType object and adds it to session
 // Arguments: name (string), maxDecimals (integer), isFungible (boolean), type (string) - all optional
 // Returns: nothing
-// Usage: createAsset("Gold", 2, true, "commodity") or createAsset()
-function createAsset(name = "", maxDecimals = 0, isFungible = false, type = "") {
-    const asset = {
+// Usage: createAssetType("Gold", 2, true, "commodity") or createAssetType()
+function createAssetType(name = "", maxDecimals = 0, isFungible = false, type = "") {
+    const assetType = {
         name: name,
         maxDecimals: maxDecimals,
         isFungible: isFungible,
         type: type
     };
-    session.assets[JSON.stringify(asset)] = asset;
+    session.assets[JSON.stringify(assetType)] = assetType;
 }
 
 // Creates a new firm object and adds it to session
