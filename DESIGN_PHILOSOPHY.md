@@ -152,6 +152,14 @@ Keep comments concise and factual. No verbose explanations or implementation det
 - Don't handle edge cases that can't occur
 - Only validate at system boundaries (user input, if requested)
 
+## Arithmetic Operations
+
+### BigNumber.js Requirement
+- ALL arithmetic operations in the program MUST use BigNumber.js methods
+- NEVER use JavaScript's default arithmetic operators (+, -, *, /, %) for calculations
+- Use BigNumber methods: `.plus()`, `.minus()`, `.times()`, `.dividedBy()`, `.modulo()`
+- This ensures precision and consistency across all numerical operations
+
 ## Communication
 
 When receiving a feature request:
