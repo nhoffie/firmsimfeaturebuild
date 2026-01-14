@@ -6,7 +6,7 @@ const firm = {
 
 const asset = {
     name: "",
-    maxPrecision: 0,
+    maxDecimals: 0,
     isFungible: false,
     type: ""
 };

@@ -14,20 +14,20 @@ function setName(asset, name) {
     asset.name = name;
 }
 
-// Gets the max precision of an asset
+// Gets the max decimals of an asset
 // Arguments: asset (asset object)
-// Returns: maxPrecision (number)
-// Usage: getMaxPrecision(myAsset)
-function getMaxPrecision(asset) {
-    return asset.maxPrecision;
+// Returns: maxDecimals (integer)
+// Usage: getMaxDecimals(myAsset)
+function getMaxDecimals(asset) {
+    return asset.maxDecimals;
 }
 
-// Sets the max precision of an asset
-// Arguments: asset (asset object), maxPrecision (number)
+// Sets the max decimals of an asset
+// Arguments: asset (asset object), maxDecimals (integer)
 // Returns: nothing
-// Usage: setMaxPrecision(myAsset, 0.001)
-function setMaxPrecision(asset, maxPrecision) {
-    asset.maxPrecision = maxPrecision;
+// Usage: setMaxDecimals(myAsset, 3)
+function setMaxDecimals(asset, maxDecimals) {
+    asset.maxDecimals = maxDecimals;
 }
 
 // Gets the fungibility of an asset

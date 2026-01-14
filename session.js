@@ -4,13 +4,13 @@ const session = {
 };
 
 // Creates a new asset object and adds it to session
-// Arguments: name (string), maxPrecision (number), isFungible (boolean), type (string) - all optional
+// Arguments: name (string), maxDecimals (integer), isFungible (boolean), type (string) - all optional
 // Returns: nothing
-// Usage: createAsset("Gold", 0.01, true, "commodity") or createAsset()
-function createAsset(name = "", maxPrecision = 0, isFungible = false, type = "") {
+// Usage: createAsset("Gold", 2, true, "commodity") or createAsset()
+function createAsset(name = "", maxDecimals = 0, isFungible = false, type = "") {
     const asset = {
         name: name,
-        maxPrecision: maxPrecision,
+        maxDecimals: maxDecimals,
         isFungible: isFungible,
         type: type
     };
